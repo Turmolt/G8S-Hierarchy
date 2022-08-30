@@ -16,14 +16,8 @@ namespace G8S
 
         struct InstanceData
         {
-            public string name;
-            public int ID;
-            public bool isActive;
-            
-            public bool isLastElement;
             public bool hasChildren;
             
-            public int nestingGroup;
             public int nestingLevel;
         }
         
@@ -91,13 +85,8 @@ namespace G8S
 
             var data = new InstanceData
             {
-                name = go.name,
                 hasChildren = childCount > 0,
-                nestingGroup = nestingGroup,
                 nestingLevel =  depth + 1,
-                ID = go.GetInstanceID(),
-                isActive = go.activeInHierarchy,
-                isLastElement = isLastChild && childCount == 0
             };
 
             _sceneIDs.Add(go.GetInstanceID(), data);
