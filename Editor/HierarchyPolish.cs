@@ -29,7 +29,7 @@ namespace G8S
         
         private static bool _initialized = false;
         private static int _firstInstanceID;
-        private static Dictionary<int, InstanceData> _sceneIDs = new ();
+        private static Dictionary<int, InstanceData> _sceneIDs = new Dictionary<int, InstanceData>();
         private static Color _overlayColor = new Color(1f, 1f, 1f, 0.02f);
         
         private static void Initialize()
@@ -52,7 +52,12 @@ namespace G8S
                 return;
             _sceneIDs.Clear();
             
+            #if UNITY_2022_1_OR_NEWER
             var prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+            #else
+            var prefabStage = UnityEditor.Experimental.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+            #endif
+            
             if (prefabStage != null)
             {
                 _firstInstanceID = prefabStage.prefabContentsRoot.GetInstanceID();
