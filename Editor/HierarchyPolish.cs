@@ -162,7 +162,7 @@ namespace G8S
         public static void DrawHorizontalLine(Rect originalRect, int nestLevel, bool hasChildren)
         {
             EditorGUI.DrawRect(new Rect(GetStartX(originalRect, nestLevel - 1), 
-                originalRect.y + originalRect.height/2f - 1,
+                originalRect.y + originalRect.height/2f - .5f,
                 originalRect.height + (hasChildren ? -5 : 2),
                 barWidth), barColor);
         }
