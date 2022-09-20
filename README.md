@@ -1,7 +1,7 @@
 # G8S-Hierarchy
-A simplified version of [Febucci's Custom Hierarchy](https://www.febucci.com/2020/10/custom-hierarchy-for-unity/)
+A simplified version of [Febucci's Custom Hierarchy](https://www.febucci.com/2020/10/custom-hierarchy-for-unit)
 
-![image](https://user-images.githubusercontent.com/8338680/187512162-c3de6a5a-7819-45e9-b247-55899aeb6706.png)
+![image](https://user-images.githubusercontent.com/8338680/191030308-8d950bd1-ebad-4e7a-9077-be37f176c367.png)
 
 It includes:
 - Tree view
