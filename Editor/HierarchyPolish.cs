@@ -46,7 +46,7 @@ namespace G8S
                 return;
             _sceneIDs.Clear();
             
-            #if UNITY_2022_1_OR_NEWER
+            #if UNITY_2021_1_OR_NEWER
             var prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
             #else
             var prefabStage = UnityEditor.Experimental.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
